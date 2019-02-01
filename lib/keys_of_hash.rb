@@ -2,7 +2,8 @@ require "pry"
 
 class Hash
   def keys_of(*arguments)
-    test = self.select {|k,v| k if arguments.include?(v)}
-    binding.pry
+    test = self.select do |k,v|
+      k if arguments.include?(v)
+    end
   end
 end
